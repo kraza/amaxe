@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+     <title>A - Maxe </title>
+     <%= stylesheet_link_tag "depot", :media => "all" %>
+     <%= javascript_include_tag :defaults %>     
+  </head>
+<body>
+<div id="store">
+ <div id="header"> 
+  <div id="logo">
+	<h1><a href="/store/"> A - MAXE  </a></h1>
+        <p>Celebrity Brands</p>
+   </div>
+   <div id="cart">
+        <a href="/store/"><%= image_tag("header.jpeg", :width=>'180', :hight=>'170') %> 
+   </div>
+   <div id="nav">
+        <ul><% for category in @tcategories %>
+                <li><a href="/store/desc/<%=h category.id %>"><%= category.title.upcase %></a> | </li>
+            <% end%>
+        </ul>
+      </div>
+   <div id="gallery">
+        <ul>
+            
+          <li class="gmen"><a href="men.html">Men</a></li>
+          <li class="gkids"><a href="boys.html">Kids</a></li>
+          <li class="gwomen"><a href="accessories.html">ACCESSORIES</a></li>
+          
+        </ul>
+      </div>
+ </div>
+<div id="body">
+	<div id="categories">
+        <h2>Categories</h2>
+        <ul>
+            <% for category in @lcategories %>
+                <li><a href="/store/desc/<%=h category.id %>"><%=h category.title %></a></li>
+            <% end%>
+        
+        </ul>
+      </div>
+      <div id="seasonal">
+        <div class="inner">
+            <%= yield :layout %>
+        </div>
+      </div>
+      <div id="collection">
+        <div class="inner">
+          <div id="minigal">
+            <div><%= image_tag("pic_1.jpeg", :height => '53', :width => '53', :alt => 'Pic') %></div>
+            <div><%= image_tag("pic_2.jpeg", :height => '53', :width => '53', :alt => 'Pic') %></div>
+            <div><%= image_tag("pic_3.jpeg", :height => '53', :width => '53', :alt => 'Pic') %></div>
+            <div><%= image_tag("pic_4.jpeg", :height => '53', :width => '53', :alt => 'Pic') %></div>
+            <div><%= image_tag("pic_5.jpeg", :height => '53', :width => '53', :alt => 'Pic') %></div>
+            <div><%= image_tag("pic_6.jpeg", :height => '53', :width => '53', :alt => 'Pic') %></div>
+          </div>
+          <h2>New Collection</h2>
+          <ul>
+            <li>New Arrivals</li>
+            <li>50% discount</li>
+          </ul>
+          
+        </div>
+      </div>
+  <div class="clear"> </div>
+      <div id="seas">
+        <div id="seas-one">
+          <p>Autumn</p>
+          <p class="date">2010</p>
+        </div>
+        <div id="seas-two">
+          <p>Summer</p>
+          <p class="date">2010</p>
+        </div>
+        <div id="seas-three">
+          <p>Monsoon</p>
+          <p class="date">2010</p>
+        </div>
+        <div class="clear"> </div>
+      </div>
+    </div>
+    <div id="copyright">
+      <p>A-MAXE Copyright &copy; 2010. Company name all rights reserved</p>
+    </div>
+</div>
+ </div> 
+  </body>
+</html>

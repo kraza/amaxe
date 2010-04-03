@@ -1,0 +1,12 @@
+
+    <h2>Categories </h2>
+    <ul>
+        <% for category in session[:catl] %>
+            <li><a href="/store/desc/<%=h category.id %>"><%=h category.title %></a></li>
+            
+        <% end%></ul>
+        <li><a href="/store/gmap/">Map</a></li>
+       
+ 
+      
+        

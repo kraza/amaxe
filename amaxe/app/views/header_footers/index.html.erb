@@ -1,0 +1,27 @@
+<div id="seasonal">
+        <div class="inner">
+<h1>Listing body and footers message</h1>
+<% @header_footers.each do |header_footer| %>
+
+
+<p>
+  <b>Message 1:</b>
+  <%=h header_footer.d1 %>
+</p>
+<p>
+  <b>Message 2:</b>
+  <%=h header_footer.d2 %>
+</p>
+<p>
+  <b>Message 3:</b>
+  <%=h header_footer.d3 %>
+</p>
+<p>
+  <b>Footer Message:</b>
+  <%=h header_footer.f %>
+</p>
+<%= link_to 'Edit', edit_header_footer_path(header_footer) %>
+<% end %>
+
+</div>
+</div>

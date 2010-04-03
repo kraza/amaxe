@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+     <title>A - Maxe </title>
+     <%= stylesheet_link_tag "depot", :media => "all" %>
+     <%= javascript_include_tag :defaults %>     
+  </head>
+<body>
+<div id="store">
+ <div id="header"> 
+  <div id="logo">
+	<h1><a href="store"> A - MAXE  </a></h1>
+        <p>Celebrity Brands</p>
+   </div>
+   <div id="cart">
+        <a href="store"><%= image_tag("header.jpeg", :width=>'180', :hight=>'170') %> 
+   </div>
+   <div id="nav">
+        <ul>
+          <li><a href="men.html">MEN</a> | </li>
+          <li><a href="boys.html">BOYS</a> | </li>
+          <li><a href="accessories.html">ACCESSORIES</a> | </li>
+          <li><a href="contact_us.html">CONTACT US</a></li>
+        </ul>
+      </div>
+   <div id="gallery">
+        <ul>
+          <li class="gmen"><a href="men.html">Men</a></li>
+          <li class="gkids"><a href="boys.html">Kids</a></li>
+          <li class="gwomen"><a href="accessories.html">ACCESSORIES</a></li>
+          
+        </ul>
+      </div>
+ </div>
+<div id="body">
+	<div id="categories">
+        <h2>Categories</h2>
+        <ul>
+          <li><a href="formal_dress.html">Formal Dresses</a></li>
+          <li><a href="party_dress.html">Party Dresses</a></li>
+          <li><a href="summer_dress.html">Summer Special</a></li>
+          <li><a href="cocktail_dress.html">Cocktail Dresses</a></li>
+          <li><a href="formal_dress.html">Formal Ware</a></li>
+          <li><a href="winter_dress.html">Winter Special</a></li>
+          <li><a href="regular_dress.html">Regular Ware</a></li>
+          <li><a href="night_dress.html">Night Dress</a></li>
+          <li><a href="#">Sports Dress</a></li>
+          <li><a href="wedding_dress.html">Wedding Dress</a></li>
+          
+        </ul>
+      </div>
+      <div id="seasonal">
+        <div class="inner">
+          <h2> A - Maxe Collections</h2>
+          <h3>Welcome</h3>
+           <p>Trust, Excellence, Quality, these are some of the abiding values that have been associated with Raymond over the years. 
+           Today, we have the distinction of being the world's largest integrated producers of worsted suiting fabrics. </p>
+           <p></p>
+        <p>.</p>
+			<p>.</p>
+			
+           <p class="more"><a href="#">more</a></p>          
+        </div>
+      </div>
+      <div id="collection">
+        <div class="inner">
+          <div id="minigal">
+            <div><%= image_tag("pic_1.jpeg", :height => '53', :width => '53', :alt => 'Pic') %></div>
+            <div><%= image_tag("pic_2.jpeg", :height => '53', :width => '53', :alt => 'Pic') %></div>
+            <div><%= image_tag("pic_3.jpeg", :height => '53', :width => '53', :alt => 'Pic') %></div>
+            <div><%= image_tag("pic_4.jpeg", :height => '53', :width => '53', :alt => 'Pic') %></div>
+            <div><%= image_tag("pic_5.jpeg", :height => '53', :width => '53', :alt => 'Pic') %></div>
+            <div><%= image_tag("pic_6.jpeg", :height => '53', :width => '53', :alt => 'Pic') %></div>
+          </div>
+          <h2>New Collection</h2>
+          <ul>
+            <li>New Arrivals</li>
+            <li>50% discount</li>
+          </ul>
+          
+        </div>
+      </div>
+  <div class="clear"> </div>
+      <div id="seas">
+        <div id="seas-one">
+          <p>Autumn</p>
+          <p class="date">2010</p>
+        </div>
+        <div id="seas-two">
+          <p>Summer</p>
+          <p class="date">2010</p>
+        </div>
+        <div id="seas-three">
+          <p>Monsoon</p>
+          <p class="date">2010</p>
+        </div>
+        <div class="clear"> </div>
+      </div>
+    </div>
+    <div id="copyright">
+      <p>A-MAXE Copyright &copy; 2010. Company name all rights reserved</p>
+    </div>
+</div>
+ </div> 
+  </body>
+</html>

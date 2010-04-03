@@ -1,0 +1,35 @@
+<div id="seasonal">
+        <div class="inner">
+        <h1>Listing products</h1>
+        <form name="sform" action="" style="display:inline;">
+<label for="item_name">Search By <%= select_tag "filter", "<option>Title</option>,<option>Catageory</option>,<option>Status</option>" %>: : </label>
+<%= text_field_tag(:query, params['query'], :size => 10, :id => 'query' ) %>
+</form>
+
+<%= image_tag("snake_transparent.gif",
+              :align => "absmiddle",
+              :border => 0,
+              :id => "spinner",
+              :style =>"display: none;" ) %>
+</p>
+
+    
+ <%= observe_field 'query',  :frequency => 1,
+         :update => 'table',
+         :before => "$('#spinner').show()",
+         :success => "$('#spinner').hide()",
+         :url => {:action => 'list'},
+         :with => 'query' %>
+
+         <div id="table">
+            <%= render :partial => "items_list" %>
+        </div>
+
+
+
+<br />
+<p><%= will_paginate @products %></p>
+<br />
+<%= link_to 'New product', new_product_path %>
+</div>
+</div>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  logo: MyString
+  header: MyString
+  d1: MyString
+  d2: MyString
+  d3: MyString
+  t1: MyString
+  t2: MyString
+  t3: MyString
+  b1: MyString
+  b2: MyString
+  b3: MyString
+  f: MyString
+
+two:
+  logo: MyString
+  header: MyString
+  d1: MyString
+  d2: MyString
+  d3: MyString
+  t1: MyString
+  t2: MyString
+  t3: MyString
+  b1: MyString
+  b2: MyString
+  b3: MyString
+  f: MyString

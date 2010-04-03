@@ -1,0 +1,3 @@
+      exists  db/migrate
+      create  db/migrate/20100316071445_add_hdata_to_header_footer.rb
+wrong number of arguments (1 for 2)

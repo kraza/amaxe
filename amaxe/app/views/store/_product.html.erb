@@ -1,0 +1,6 @@
+<div id="minigal">
+<% @products.each do |product| %>
+                <div><%= image_tag(product.public_filename,:width => '55',:height=> '55') %></div>
+            <% end %>
+            <p><%= will_paginate @products %></p>
+</div>

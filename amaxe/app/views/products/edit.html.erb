@@ -1,0 +1,38 @@
+<div id="seasonal">
+        <div class="inner">
+<h1>Editing product</h1>
+
+<% form_for(@product,:html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :cat_id,"Category" %>
+    <%= @category = Category.find(:all,:conditions => "action = 'A'", :order => 'title').map {|u| [u.title, u.id] }
+     f.select(:cat_id, @category) %>
+  </p>
+  <p>
+    <%= f.label :action,"Status   " %>
+    <%= f.select :action, Category:: ACTION, :prompt => "Select status for product" %>
+  </p>
+  <p>
+    <label for="product">Upload A Product image:</label>
+   <%= image_tag(@product.public_filename,:width => '175',:height=> '130') %>
+    <%= f.file_field :uploaded_data %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @product %> |
+<%= link_to 'Back', products_path %>
+</div>
+</div>

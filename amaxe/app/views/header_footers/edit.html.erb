@@ -1,0 +1,31 @@
+<div id="seasonal">
+        <div class="inner">
+<h1>Editing body and footer messages</h1>
+
+<% form_for(@header_footer,:html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+<p>
+  <b>Message 1:</b>
+  <%= f.text_field :d1 %>
+</p>
+<p>
+  <b>Message 2:</b>
+  <%= f.text_field :d2 %>
+</p>
+<p>
+  <b>Message 3:</b>
+  <%= f.text_field :d3 %>
+</p>
+<p>
+  <b>Footer Message:</b>
+  <%= f.text_area (:f, :size => "30x5")%>
+</p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show',header_footers_path %> |
+<%= link_to 'Back', header_footers_path %>
+</div>
+</div>

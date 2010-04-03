@@ -1,0 +1,73 @@
+<p>
+  <b >Logo:</b>
+  <%=h @header_footer.logo %>
+  
+<img src="<%= url_for(:action => 'picture', :id => @header_footer.id) %>" width="155" hight="160" />
+</p>
+<p>
+  <b>Header:</b>
+  <%=h @header_footer.header %>
+<img src="<%= url_for(:action => 'picture1', :id => @header_footer.id) %>" width="155" hight="160" />
+  </p>
+<p>
+  <b>Top 1:</b>
+  <%=h @header_footer.t1 %>
+<img src="<%= url_for(:action => 'picture2', :id => @header_footer.id) %>" width="155" hight="160"  />
+  </p>
+<p>
+  <b>Top 2:</b>
+  <%=h @header_footer.t2 %>
+
+<img src="<%= url_for(:action => 'picture3', :id => @header_footer.id) %>" width="155" hight="160" />
+</p>
+<p>
+  <b>Top 3:</b>
+  <%=h @header_footer.t3 %>
+
+<img src="<%= url_for(:action => 'picture4', :id => @header_footer.id) %>" width="155" hight="160" />
+  </p>
+<p>
+  <b>Bottom 1:</b>
+  <%=h @header_footer.b1 %>
+
+<img src="<%= url_for(:action => 'picture5', :id => @header_footer.id) %>" width="155" hight="160" />
+  </p>
+<p>
+  <b>Bottom 2:</b>
+  <%=h @header_footer.b1 %>
+
+<img src="<%= url_for(:action => 'picture6', :id => @header_footer.id) %>" width="155" hight="160" />
+  </p>
+<p>
+  <b>Bottom 3:</b>
+  <%=h @header_footer.b2 %>
+
+<img src="<%= url_for(:action => 'picture7', :id => @header_footer.id) %>" width="155" hight="160" />
+  </p>
+<p>
+  
+
+<p>
+  <b>D1:</b>
+  <%=h @header_footer.d1 %>
+</p>
+
+<p>
+  <b>D2:</b>
+  <%=h @header_footer.d2 %>
+</p>
+
+<p>
+  <b>D3:</b>
+  <%=h @header_footer.d3 %>
+</p>
+
+
+<p>
+  <b>Footer Message :</b>
+  <%=h @header_footer.f %>
+</p>
+
+
+<%= link_to 'Edit', edit_header_footer_path(@header_footer) %> |
+<%= link_to 'Back', header_footers_path %>

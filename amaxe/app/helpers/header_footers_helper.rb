@@ -1,0 +1,2 @@
+module HeaderFootersHelper
+end

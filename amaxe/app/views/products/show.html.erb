@@ -1,0 +1,32 @@
+<div id="seasonal">
+        <div class="inner">
+<p>
+  <b>Title:</b>
+  <%=h @product.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @product.description %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @product.cat_id%>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @product.action%>
+</p>
+
+<p>
+  <b>Product Image</b>
+  <%= image_tag(@product.public_filename,:width => '175',:height=> '130') %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
+</div>
+</div>

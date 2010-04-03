@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+     <title>A - Maxe </title>
+     <%= stylesheet_link_tag "depot", :media => "all" %>
+     <%= stylesheet_link_tag 'redbox' %>
+     <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'jquery-ui' %>
+    <%= javascript_include_tag 'jrails' %>
+    
+    
+  </head>
+<body>
+<div id="store">
+ <div id="header"> 
+  <div id="logo">
+	<h1><a href="/store/"> A - MAXE  </a></h1>
+        <p>Celebrity Brands</p>
+   </div>
+   <div id="cart">
+        <a href="/store/"><%= image_tag("header.jpeg", :width=>'180', :hight=>'170') %> 
+   </div>
+   <div id="nav">
+        <ul><% for category in session[:catt] %>
+                <li><a href="/store/desc/<%=h category.id %>"><%= category.title.upcase %></a> | </li>
+            <% end%>
+        </ul>
+      </div>
+   <div id="gallery">
+        <ul>
+            
+          <li class="gmen"><a href="men.html">Men</a></li>
+          <li class="gkids"><a href="boys.html">Kids</a></li>
+          <li class="gwomen"><a href="accessories.html">ACCESSORIES</a></li>
+          
+        </ul>
+      </div>
+ </div>
+<div id="body">
+  <div id="categories">
+    <%= render(:partial => "/store/category" , :object => session[:catl]) %>
+     <br /><br />
+      <% if session[:user_id] %>
+            <li><b>  Administration:  </b></li>
+           
+            <li><%= link_to 'Category', :controller => 'categories' %><br /></li>
+            <li><%= link_to 'Products', :controller => 'products' %><br /></li>
+            <li><%= link_to 'Header Footer', :controller=> 'header_footers' %><br /></li>
+            <li><%= link_to 'User', :controller=> 'users' %><br /></li>
+            <li><%= link_to 'Logout', :controller => 'admin', :action => 'logout' %></li>
+     <%  end %>
+   </div>
+    <%= yield :layout %>
+  
+      
+  <div class="clear"> </div>
+      <div id="seas">
+        <div id="seas-one">
+          <p>Autumn</p>
+          <p class="date">2010</p>
+        </div>
+        <div id="seas-two">
+          <p>Summer</p>
+          <p class="date">2010</p>
+        </div>
+        <div id="seas-three">
+          <p>Monsoon</p>
+          <p class="date">2010</p>
+        </div>
+        <div class="clear"> </div>
+      </div>
+    </div>
+    <div id="copyright">
+      <p><%=h session[:head_foot].f %></p>
+    </div>
+</div>
+ </div> 
+  </body>
+</html>

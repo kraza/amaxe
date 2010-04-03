@@ -1,0 +1,52 @@
+<div id="seasonal">
+        <div class="inner">
+<h1>Editing category</h1>
+
+<% form_for(@category) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description, "Description 1" %><br />
+    <%= f.text_area (:description, :size => "40x10") %>
+  </p>
+  <p>
+    <%= f.label :d1,"Description 2" %><br />
+    <%= f.text_area (:d1, :size => "40x10") %>
+  </p>
+  <p>
+    <%= f.label :d2,"Description 3" %><br />
+    <%= f.text_area (:d2, :size => "40x10") %>
+  </p>
+  <p>
+    <%= f.label :d3,"Description 4" %><br />
+    <%= f.text_area (:d3, :size => "40x10") %>
+  </p>
+  <p>
+    <%= f.label :d4,"Description 5" %><br />
+    <%= f.text_area (:d4, :size => "40x10") %>
+  </p>
+  <p>
+    <%= f.label :d5,"Description 6" %><br />
+    <%= f.text_area (:d5, :size => "40x10") %>
+  </p>
+  <p>
+    <%= f.label :position %>
+    <%= f.select :position, Category:: HEADER_LOCATION, :prompt => "Select position for catagory" %>
+  </p>
+   <p>
+    <%= f.label :action %>
+    <%= f.select :action, Category:: ACTION, :prompt => "Select status for catagory" %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @category %> |
+<%= link_to 'Back', categories_path %>
+</div>
+</div>

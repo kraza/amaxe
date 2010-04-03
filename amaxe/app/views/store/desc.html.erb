@@ -1,0 +1,21 @@
+<div id="seasonal">
+        <div class="inner">
+<h2> <%=h @category.title %></h2>
+
+<p><%=h @category.description %> </p>
+<p><%=h @category.d1 %> </p>
+<p><%=h @category.d2 %> </p>
+<p><%=h @category.d3 %> </p>
+<p><%=h @category.d4 %> </p>
+<p><%=h @category.d5 %> </p>
+<p></p>
+<p></p>
+<p></p>
+ </div>
+      </div>
+<div id="collection">
+        <div class="inner">
+          <%= render(:partial => "product" , :object => @products) %>
+          <%= render(:partial => "header_footer" , :object => @header_footer) %>          
+        </div>
+      </div>
