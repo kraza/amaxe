@@ -11,8 +11,19 @@
 
 ActiveRecord::Schema.define(:version => 20100318104408) do
 
-# Could not dump table "categories" because of following StandardError
-#   Unknown type 'sring' for column 'd3'
+  create_table "categories", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "position"
+    t.string   "action"
+    t.string   "d1"
+    t.string   "d2"
+    t.string   "d3"
+    t.string   "d4"
+    t.string   "d5"
+  end
 
   create_table "header_footers", :force => true do |t|
     t.string   "logo"
@@ -53,7 +64,7 @@ ActiveRecord::Schema.define(:version => 20100318104408) do
     t.string "comment"
     t.string "name"
     t.string "content_type"
-    t.binary "data",         :limit => 1048576
+    t.binary "data",         :limit => 16777215
   end
 
   create_table "products", :force => true do |t|
